@@ -287,14 +287,13 @@ input:focus {
     font-size: 0.85rem;
     top: 100px;
     left: -90px;
-    transform: translate(-50%,0);
-    transition: 0.3s linear;
-    display: flex;
+    opacity: 0;
     flex-direction: column;
   }
   #weather.active{
+    opacity: 1;
     top: 50px;
-    left: 79px;
+    left: 76px;
   }
   .weathers {
     margin-bottom: 5px;
