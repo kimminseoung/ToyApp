@@ -56,7 +56,9 @@ body {
   overflow: hidden;
   touch-action: none;
 }
-
+input:focus {
+  outline: none;
+}
 .container {
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
@@ -282,18 +284,19 @@ body {
     display: block;
   }
   #weather {
-    font-size: 1rem;
-    top: -150px;
-    left: 50%;
+    font-size: 0.85rem;
+    top: 100px;
+    left: -90px;
     transform: translate(-50%,0);
     transition: 0.3s linear;
     display: flex;
+    flex-direction: column;
   }
   #weather.active{
-    top: 19px;
+    top: 50px;
+    left: 90px;
   }
   .weathers {
-    margin-bottom: 0px;
-    margin-right: 3px;
+    margin-bottom: 5px;
   }
 }
