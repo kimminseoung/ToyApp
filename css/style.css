@@ -1,0 +1,301 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+/* ==== */
+html {
+  font-size: 14px;
+}
+body {
+  background-color: #fff;
+  overflow: hidden;
+  touch-action: none;
+}
+input:focus {
+  outline: none;
+}
+.container {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#Time {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: #fff;
+  font-size: 3rem;
+  transition: 0.3s linear;
+}
+#loginName {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.login {
+  width: 300px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 8px;
+}
+.login input {
+  height: 50px;
+  border: none;
+}
+.login button {
+  padding: 10px 35px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #44bd32;
+  color: #fff;
+}
+#openList {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#openList:hover {background-color: #00a8ff; color: #fff; box-shadow: 0 0 50px rgba(255, 255, 255, 1);}
+#openList.Listhidden,#Time.Listhidden{left: -180px;}
+#listWrap {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%,-50%);
+  transition: 0.3s;
+  width: 350px;
+  background-color: #dfe6e9;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  height: 500px;
+  box-shadow: 10px 20px 0 rgba(0,0,0, 0.2);
+  border-radius: 12px;
+}
+#listWrap.Listhidden {left: 50%;}
+#listWrap::-webkit-scrollbar {display: none;}
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: #000;
+  z-index: 1;
+  background-color: inherit;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.close:hover {
+  transform: rotate(180deg);
+}
+#formInput {
+  padding: 20px 30px;
+  border-bottom: 2px solid #fff;
+}
+#formInput input{
+  padding: 10px 0;
+  padding-left: 10px;
+  border: none;
+  width: 50%;
+  border-radius: 8px;
+  transition: 0.3s linear;
+}
+#formInput input:focus {
+  width: 70%;
+}
+#formInput button {
+  padding: 8px 17px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #44bd32;
+  color: #fff;
+}
+#ulList{
+  width: 100%;
+  padding: 10px 30px;
+}
+#ulList li {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px 10px;
+  padding-bottom: 40px;
+  margin-bottom: 10px;
+}
+
+.Listhidden {left: 0;}
+.hidden {display: none;}
+
+#timeline {
+  font-size: 3px;
+  color: gray;
+}
+.todoItem {
+  position: relative;
+  background-color: #fff;
+  transition: 0.3s linear;
+  overflow: hidden;
+  word-break: break-all;
+}
+.todoItem span {
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  font-size: 0.1rem;
+}
+.todoItem button {
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  right: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #44bd32;
+  color: #fff;
+}
+#todoItem:hover .hidden {
+  display: none;
+}
+.todoItem:hover{
+  background-color:#3c6382 !important;
+  color: #fff;
+}
+.todoItem:hover span{
+  color: #fff !important;
+}
+#weather {
+  color: #fff;
+  font-size: 1.2rem;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translate(-50%,0);
+  transition: 0.3s linear;
+}
+#weather.active{
+  top: 20px;
+}
+.weathers {
+  margin-bottom: 3px;
+}
+@media screen and (max-width:768px) {
+  .login input {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+  }
+  .login input:focus {
+    border: none;
+  }
+  .login button {
+    width: 100%;
+    border-radius: 0;
+  }
+  .login {
+    width: 50%;
+  }
+  #Time {
+    font-size: 1rem;
+  }
+  #loginName {
+    font-size: 0.9rem;
+  }
+  #timeline {
+    font-size:1rem;
+  }
+  #openList{
+    left: 20px;
+    bottom: 20px;
+  }
+  #formInput button {
+    width: 100%;
+    margin-top: 5px;
+  }
+  #todoItem:hover .hidden {
+    display: block;
+  }
+  #formInput input:focus,#formInput input{
+    width: 100%;
+  }
+  .todoItem button.hidden {
+    display: block;
+  }
+  #weather {
+    font-size: 0.85rem;
+    top: 100px;
+    left: -90px;
+    opacity: 0;
+    flex-direction: column;
+  }
+  #weather.active{
+    opacity: 1;
+    top: 50px;
+    left: 76px;
+  }
+  .weathers {
+    margin-bottom: 5px;
+  }
+}
